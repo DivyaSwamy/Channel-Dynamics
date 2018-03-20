@@ -5,6 +5,10 @@ function [Channel_Trace,OpenTimes,CloseTimes] = GenerateChannelTrace(tauop,taucl
 % of taucl. 
 % Sample_time = frame rate of experiment
 % Total_time = total time you want to simulate the trace for
+% VALIDATION
+% To validate check mean(OpenTimes)*sample_time. It should equal tauop.
+% Also mean(CloseTimes)*sample_time = tauclose.
+% The exponential decay time you get from the distribution of OpenTimes and CloseTimes equal tauop and tauclose. 
 
 Nsteps = ceil(total_time./sample_time);
 
