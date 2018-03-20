@@ -3,8 +3,12 @@ function [Channel_Trace,OpenTimes,CloseTimes] = GenerateChannelTrace(tauop,taucl
 % To generate a binary open close trace given that the channel
 % has a mean open time of  tauop ms and a mean close time
 % of taucl. 
+% INPUT - mean open time tauop, mean close time tauclose
 % Sample_time = frame rate of experiment
 % Total_time = total time you want to simulate the trace for
+% OUTPUT = A binary Channel_Trace where 0 stands for closed channel and 1 for open channel of duratio total_time.
+% OpenTimes - distribution of open times as number of frames. 
+% CloseTimes - distribution of close times as number of frames.
 % VALIDATION
 % To validate check mean(OpenTimes)*sample_time. It should equal tauop.
 % Also mean(CloseTimes)*sample_time = tauclose.
