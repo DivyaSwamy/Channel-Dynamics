@@ -1,5 +1,8 @@
 function  [array_eta_baseline,array_eta_signal]= Calculate_avg_eta(CC_Mat,x,y)
-% March 21 @ DS
+% March 21 2018 @ DS
+% Take in cross correlatoin matrix and for a single ROI = 3x3 px around
+% channel locations calculate averaged eta. 
+% Return the 1D result = avg eta vlaue for every channel. 
 array_eta_baseline=[]; array_eta_signal= [];
 
 CC_Mat_baseline = CC_Mat(:,:,1:3); CC_Mat_Signal = CC_Mat(:,:,6:end);
