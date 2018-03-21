@@ -1,5 +1,7 @@
 function [x,y] = GenerateChannelPositions(my,mx,num_channels)
-% Random Channel positions
+% INPUT - image dimensions my and mx & num_channels to place in the image stack
+% OUTPUT - channel positions in [x y]
+%
 x = ceil(mx*rand(1,num_channels)); y = ceil(my*rand(1,num_channels));
 
 % Delete channels on image boundaries.
