@@ -4,6 +4,8 @@ function [CC_Mat] = Calculate_CrossCorrelation_Stack(Stack,frames,lag)
 % Input: Stack - the input 3D stack typically raw fluorescence
 %        frames - how many frames make up a single time subsection
 %        lAGS:- lags over which cross correlation is calculated. 
+%        Basically calculate area upto a predetermined lag for the 
+%        calculated <correlation curve> per pixel.
 % OUTPUT: is 3D cross correlation matrix CC_Mat
 
 outersections = floor(size(Stack,3)./frames);
@@ -58,11 +60,8 @@ CC_Mat=zeros(my,mx,outersections);
         p1 = p1+frames;
         
         disp(p1)
-        
     end 
-                
-                
-              
+                              
 return
 end
 
