@@ -1,5 +1,9 @@
 function [img_ch]=PlaceChannels(img,x,y,index,mask,amplitude,tau_op,...
     tau_cl,tstp,total_time)
+% March 21st 2018 @ DS
+% INPUT - img stack, channel positions, gaussian mask, 
+% amplitude of channel openings and channel properties.
+% OUTPUT- an img stack with channels embedded at specified locations.
 
 img_ch = img;
 
